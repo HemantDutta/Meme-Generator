@@ -11,28 +11,41 @@
 <body>
 <div class="container main-cont d-flex justify-content-center flex-column align-items-center mt-5">
     <div class="top-text mt-5">
-        <h1 class="text-light">RRMG v0.1</h1>
+        <h1 class="text-light">RRMG v0.1 <i class="fa-brands fa-reddit"></i></h1>
     </div>
     <div class="meme-generator mt-5 p-5">
         <div class="search-section">
             <div class="search-bar row justify-content-around">
                 <input type="text" name="subreddit" id="subreddit" placeholder="Enter Sub-Reddit" class="form-control col-lg-8">
-                <button class="form-control btn btn-outline-light col-lg-2"><i class="fa-solid fa-search"></i></button>
+                <button class="form-control btn btn-outline-light col-lg-2 md-mt" onclick="search()"><i class="fa-solid fa-search"></i></button>
             </div>
             <hr color="white" noshade width="100%">
             <div class="suggestions mt-3">
                 <h3 class="text-center text-light">Try These...</h3>
                 <div class="sug-btns row justify-content-around mt-3">
-                    <button class="btn btn-outline-light rounded-pill px-5 col-lg-3 sug-btn">memes</button>
-                    <button class="btn btn-outline-light rounded-pill px-5 col-lg-3 sug-btn">dankmemes</button>
-                    <button class="btn btn-outline-light rounded-pill px-5 col-lg-3 sug-btn">wholesomememes</button>
+                    <button class="btn btn-outline-light rounded-pill px-5 col-lg-3 sug-btn md-mt" onclick="suggest('memes')">memes</button>
+                    <button class="btn btn-outline-light rounded-pill px-5 col-lg-3 sug-btn md-mt" onclick="suggest('dankmemes')">dankmemes</button>
+                    <button class="btn btn-outline-light rounded-pill px-5 col-lg-3 sug-btn md-mt" onclick="suggest('funny')">funny</button>
                 </div>
             </div>
         </div>
-        <div class="display-section mt-5">
-            
-        </div>
     </div>
+</div>
+<div class="memeCont d-none" id="memeCont">
+    <div class="display-section mt-3 row align-items-center">
+        <div class="meme-info d-flex flex-column col-lg-6 col-md-12">
+            <em><h2 id="memeTitle" class="text-light"></h2></em>
+            <h3 id="memeAuthor"></h3>
+            <span id="nsfwWarn"></span>
+            <span id="spoilerWarn"></span>
+            <span id="redditLink"></span>
+        </div>
+        <div id="meme-img" class="col-lg-6 col-md-12 md-mt"></div>
+    </div>
+</div>
+<div class="me text-center">
+    <span>Developed By: Hemant Dutta</span>
+    <span><a href="https://github.com/HemantDutta/Meme-Generator" target="_blank"><i class="fa-brands fa-github"></i></a></span>
 </div>
 <!--Scripts-->
 <script src="js/jquery-3.6.0.js"></script>
