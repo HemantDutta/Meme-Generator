@@ -12,13 +12,14 @@
 <body>
 <div class="container main-cont d-flex justify-content-center flex-column align-items-center mt-5">
     <div class="top-text mt-5">
-        <h1 class="text-light">RRMG v0.1.b<i class="fa-brands fa-reddit"></i></h1>
+        <h1 class="text-light">RRMG v0.1.b <i class="fa-brands fa-reddit"></i></h1>
     </div>
     <div class="meme-generator mt-5 p-5">
         <div class="search-section">
             <div class="search-bar row justify-content-around">
-                <input type="text" name="subreddit" id="subreddit" placeholder="Enter Sub-Reddit" class="form-control col-lg-8">
+                <input type="text" name="subreddit" id="subreddit" placeholder="Enter Sub-Reddit" class="form-control col-lg-6">
                 <button class="form-control btn btn-outline-light col-lg-2 md-mt" onclick="search()"><i class="fa-solid fa-search"></i></button>
+                <button class="btn btn-outline-light col-lg-2 md-mt" onclick="safeMode()" title="Disable Safe Mode"><i class="fa-solid fa-shield" id="safeIcon"></i></button>
             </div>
             <hr color="white" noshade width="100%">
             <div class="suggestions mt-3">
@@ -44,16 +45,17 @@
         <div id="meme-img" class="col-lg-6 col-md-12 md-mt"></div>
     </div>
 </div>
-<div class="updates text-center d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
-    <h2 class="text-light">New Updates</h2>
-    <hr width="50%" class="bg-white" noshade>
-    <ul class="d-flex flex-column align-items-start">
-        <li class="text-light">Added Safety: The app will only accept comedy related subreddits in the search bar.</li>
-        <li class="text-light">UI Upgrades: UI Animations, transitions and more coming soon!</li>
-        <li class="text-light">Subreddit names: List of acceptable subreddit names will be updated soon!</li>
-        <li class="text-light">Favicon Added: Meet the dank cat that's gonna be serving as our favicon</li>
+<div class="updates text-center d-flex flex-column justify-content-center align-items-center mt-5 mb-5 col-xs-none">
+    <h2 class="text-light col-xs-none">New Updates</h2>
+    <hr width="50%" class="bg-white col-xs-none" noshade>
+    <ul class="d-flex flex-column align-items-start p-2">
+        <li class="text-light col-xs-none">Added Safety: The app will only accept comedy related subreddits in the search bar.</li>
+        <li class="text-light col-xs-none">UI Upgrades: UI Animations, transitions and more coming soon!</li>
+        <li class="text-light col-xs-none">Subreddit names: List of acceptable subreddit names will be updated soon!</li>
+        <li class="text-light col-xs-none">Favicon Added: Meet the dank cat that's gonna be serving as our favicon</li>
     </ul>
 </div>
+
 <div class="me text-center">
     <span>Developed By: Hemant Dutta</span>
     <span><a href="https://github.com/HemantDutta/Meme-Generator" target="_blank"><i class="fa-brands fa-github"></i></a></span>

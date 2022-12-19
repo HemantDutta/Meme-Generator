@@ -82,3 +82,9 @@ body {
      margin-top: 10px;
  }
 }
+
+@media (max-width: 633px) {
+    .col-xs-none{
+        display: none;
+    }
+}
