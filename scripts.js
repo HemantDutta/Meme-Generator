@@ -24,7 +24,14 @@ function suggest(val) {
 }
 
 function safeMode(){
-    
+    if(safe){
+        safe = false;
+        document.getElementById('safeBtn').title = "Enable Safe Mode";
+    }
+    else{
+        safe = true;
+        document.getElementById('safeBtn').title = "Disable Safe Mode";
+    }
 }
 
 function generateMeme(subreddit) {
