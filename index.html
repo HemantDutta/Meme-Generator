@@ -10,51 +10,40 @@
     <link rel="icon" href="assets/images/favIco.gif?" type="image/x-icon">
 </head>
 <body>
-<div class="container main-cont d-flex justify-content-center flex-column align-items-center mt-5">
-    <div class="top-text mt-5">
-        <h1 class="text-light">RRMG v0.1.b <i class="fa-brands fa-reddit"></i></h1>
+<div class="main-cont">
+    <div class="top-text">
+        <h1>RRMG v1.0.a <i class="fa-brands fa-reddit"></i></h1>
     </div>
-    <div class="meme-generator mt-5 p-5">
+    <div class="meme-generator mt-5">
         <div class="search-section">
-            <div class="search-bar row justify-content-around">
+            <div class="search-bar">
                 <input type="text" name="subreddit" id="subreddit" placeholder="Enter Sub-Reddit" class="form-control col-lg-6">
-                <button class="form-control btn btn-outline-light col-lg-2 md-mt" onclick="search()"><i class="fa-solid fa-search"></i></button>
-                <button class="btn btn-outline-light col-lg-2 md-mt" onclick="safeMode()" title="Disable Safe Mode" id="safeBtn"><i class="fa-solid fa-shield" id="safeIcon"></i></button>
+                <button class="my-btn top" onclick="search()"><i class="fa-solid fa-search"></i></button>
+                <button class="my-btn top" onclick="safeMode()" title="Disable Safe Mode" id="safeBtn">SFW</button>
             </div>
-            <hr color="white" noshade width="100%">
+            <span class="hr-line"></span>
             <div class="suggestions mt-3">
                 <h3 class="text-center text-light">Try These...</h3>
-                <div class="sug-btns row justify-content-around mt-3">
-                    <button class="btn btn-outline-light rounded-pill px-5 col-lg-3 sug-btn md-mt" onclick="suggest('memes')">memes</button>
-                    <button class="btn btn-outline-light rounded-pill px-5 col-lg-3 sug-btn md-mt" onclick="suggest('dankmemes')">dankmemes</button>
-                    <button class="btn btn-outline-light rounded-pill px-5 col-lg-3 sug-btn md-mt" onclick="suggest('funny')">funny</button>
+                <div class="sug-btns">
+                    <button class="my-btn" onclick="suggest('memes')">r/memes</button>
+                    <button class="my-btn" onclick="suggest('dankmemes')">r/dankmemes</button>
+                    <button class="my-btn" onclick="suggest('funny')">r/funny</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="memeCont d-none" id="memeCont">
-    <div class="display-section mt-3 row align-items-center">
-        <div class="meme-info d-flex flex-column col-lg-6 col-md-12">
-            <em><h2 id="memeTitle" class="text-light"></h2></em>
+    <div class="display-section">
+        <div class="meme-info">
+            <em><h2 id="memeTitle"></h2></em>
             <h3 id="memeAuthor"></h3>
             <span id="nsfwWarn"></span>
             <span id="spoilerWarn"></span>
             <span id="redditLink"></span>
         </div>
-        <div id="meme-img" class="col-lg-6 col-md-12 md-mt"></div>
+        <div id="meme-img"></div>
     </div>
-</div>
-<div class="updates text-center d-flex flex-column justify-content-center align-items-center mt-5 mb-5 col-xs-none">
-    <h2 class="text-light col-xs-none">New Updates</h2>
-    <hr width="50%" class="bg-white col-xs-none" noshade>
-    <ul class="d-flex flex-column align-items-start p-2">
-        <li class="text-light col-xs-none">Added Safety: The app will only accept comedy related subreddits in the search bar.</li>
-        <li class="text-light col-xs-none">UI Upgrades: UI Animations, transitions and more coming soon!</li>
-        <li class="text-light col-xs-none">Subreddit names: List of acceptable subreddit names will be updated soon!</li>
-        <li class="text-light col-xs-none">Favicon Added: Meet the dank cat that's gonna be serving as our favicon</li>
-        <li class="text-light col-xs-none">Safe Mode: Button Added! UI Changes coming!</li>
-    </ul>
 </div>
 <div class="me text-center">
     <span>Developed By: Hemant Dutta</span>
